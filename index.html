@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 03 • Minha Primeira Conexão com API - SENAI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1>🌐 Aula 03: Interação com APIs</h1>
+    <p>Consumindo APIs com JavaScript puro e direto (fetch e .innerText)</p>
+  </header>
+
+  <main class="container">
+
+    <!-- ============================================================== -->
+    <!-- PARTE 1: FEITO EM CONJUNTO COM O PROFESSOR                    -->
+    <!-- ============================================================== -->
+    <section class="card destaque">
+      <span class="tag professor">Feito em Conjunto</span>
+      <h2>1. Buscar Produto de Exemplo</h2>
+      <p class="subtitulo">Vamos buscar o produto número 1 na API e preencher os textos abaixo.</p>
+
+      <button id="btn-buscar" class="btn principal">Buscar Produto</button>
+
+      <!-- Elementos fixos no HTML: vamos apenas preencher o texto deles -->
+      <div class="resultado">
+        <h3 id="titulo">O título aparecerá aqui...</h3>
+        <p id="preco" class="destaque-preco">Preço: --</p>
+        <p id="descricao" class="texto-descricao">A descrição aparecerá aqui...</p>
+      </div>
+    </section>
+
+    <!-- DIVISOR -->
+    <div class="divisor">
+      <span>✏️ Agora é a sua vez (Exercícios Práticos)</span>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- EXERCÍCIO 01: BUSCAR PRODUTO POR ID DIGITADO                  -->
+    <!-- ============================================================== -->
+    <section class="card">
+      <span class="tag aluno">Exercício 01</span>
+      <h2>2. Buscar Produto por ID</h2>
+      <p class="subtitulo">Digite o ID de um produto (ex: 2, 3, 5, 10) e clique em buscar.</p>
+
+      <div class="linha-busca">
+        <input type="number" id="input-id" placeholder="Digite o ID (ex: 2)" min="1">
+        <button id="btn-buscar-id" class="btn">Buscar por ID</button>
+      </div>
+
+      <div class="resultado">
+        <h3 id="ex1-titulo">Título: --</h3>
+        <p id="ex1-preco" class="destaque-preco">Preço: --</p>
+        <p id="ex1-descricao" class="texto-descricao">Descrição: --</p>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- EXERCÍCIO 02: CONSULTAR ENDEREÇO POR CEP (ViaCEP)             -->
+    <!-- ============================================================== -->
+    <section class="card">
+      <span class="tag aluno">Exercício 02</span>
+      <h2>3. Consultar Endereço por CEP</h2>
+      <p class="subtitulo">Consulte o endereço digitando os 8 números do CEP na API pública do ViaCEP.</p>
+
+      <div class="linha-busca">
+        <input type="text" id="input-cep" placeholder="Ex: 01001000" maxlength="8">
+        <button id="btn-buscar-cep" class="btn">Consultar CEP</button>
+      </div>
+
+      <div class="resultado">
+        <p id="cep-rua"><strong>Rua:</strong> --</p>
+        <p id="cep-bairro"><strong>Bairro:</strong> --</p>
+        <p id="cep-cidade"><strong>Cidade / UF:</strong> --</p>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- EXERCÍCIO 03: BUSCAR CATEGORIA POR ID                         -->
+    <!-- ============================================================== -->
+    <section class="card">
+      <span class="tag aluno">Exercício 03</span>
+      <h2>4. Buscar Categoria da Loja</h2>
+      <p class="subtitulo">Digite o ID de uma categoria (1: Clothes, 2: Electronics, 3: Furniture) e veja o nome.</p>
+
+      <div class="linha-busca">
+        <input type="number" id="input-cat-id" placeholder="ID da categoria (ex: 1)" min="1">
+        <button id="btn-buscar-cat" class="btn">Buscar Categoria</button>
+      </div>
+
+      <div class="resultado">
+        <h3 id="cat-nome">Nome da Categoria: --</h3>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- EXERCÍCIO 04: BUSCAR USUÁRIO POR ID                           -->
+    <!-- ============================================================== -->
+    <section class="card">
+      <span class="tag aluno">Exercício 04</span>
+      <h2>5. Buscar Usuário por ID</h2>
+      <p class="subtitulo">Digite o ID de um usuário (ex: 1, 2, 3) e veja o nome, o e-mail e o perfil.</p>
+
+      <div class="linha-busca">
+        <input type="number" id="input-user-id" placeholder="ID do usuário (ex: 1)" min="1">
+        <button id="btn-buscar-user" class="btn">Buscar Usuário</button>
+      </div>
+
+      <div class="resultado">
+        <h3 id="user-nome">Nome: --</h3>
+        <p id="user-email">E-mail: --</p>
+        <p id="user-perfil">Perfil: --</p>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- EXERCÍCIO 05: LISTA DE PRODUTOS (primeiro item e quantidade)  -->
+    <!-- ============================================================== -->
+    <section class="card">
+      <span class="tag aluno">Exercício 05</span>
+      <h2>6. Lista de Produtos</h2>
+      <p class="subtitulo">Busque 10 produtos de uma vez. Mostre quantos chegaram e o título do primeiro.</p>
+
+      <button id="btn-lista" class="btn">Buscar 10 Produtos</button>
+
+      <div class="resultado">
+        <h3 id="lista-quantidade">Quantidade: --</h3>
+        <p id="lista-primeiro">Primeiro produto: --</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>SESI SENAI • Disciplina: Interação com APIs • Prof. Jefferson Miguel Dallalibera</p>
+  </footer>
+
+  <script src="api.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* ==============================================================================
+   ESTILO SIMPLES E DIRETO • AULA 03 SENAI
+   Sem animações pesadas, sem complexidades: foco total na clareza dos alunos
+   ============================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  line-height: 1.5;
+  padding-bottom: 40px;
+}
+
+header {
+  background-color: #1e293b;
+  padding: 24px 20px;
+  text-align: center;
+  border-bottom: 2px solid #334155;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 760px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+.divisor {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  border-top: 1px dashed #334155;
+  padding-top: 20px;
+}
+
+.divisor span {
+  background-color: #1e293b;
+  color: #fbbf24;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card.destaque {
+  border-left: 4px solid #38bdf8;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.tag.professor {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+.tag.aluno {
+  background-color: #d97706;
+  color: #ffffff;
+}
+
+.card h2 {
+  font-size: 19px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.subtitulo {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* Botões */
+.btn {
+  background-color: #334155;
+  color: #ffffff;
+  border: none;
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn:hover {
+  background-color: #475569;
+}
+
+.btn.principal {
+  background-color: #0284c7;
+}
+
+.btn.principal:hover {
+  background-color: #0369a1;
+}
+
+/* Campos de entrada */
+.linha-busca {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.linha-busca input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 14px;
+  width: 220px;
+}
+
+.linha-busca input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* Painel de Resultados */
+.resultado {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 14px;
+  margin-top: 14px;
+}
+
+.resultado h3 {
+  font-size: 16px;
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+.destaque-preco {
+  color: #34d399;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.texto-descricao {
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.resultado p {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.resultado strong {
+  color: #94a3b8;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #64748b;
+}
