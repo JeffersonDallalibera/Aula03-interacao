@@ -1,8 +1,14 @@
 # Exercícios • Aula 03
+**Unidade Curricular:** Interação com APIs (SENAI)  
+**Docente:** Prof. Jefferson Miguel Dallalibera  
+
+> 🌐 **Dica de Teste 100% Online (Sem Postman):**  
+> Como não temos o Postman instalado na máquina, você pode testar as URLs antes de programar de duas formas gratuitas e sem cadastro:  
+> 1. **No Hoppscotch (O Postman Web gratuito):** Acesse [hoppscotch.io](https://hoppscotch.io), cole a URL em GET e clique em **Send**.  
+> 2. **No Navegador Direto:** Cole a URL na barra de endereços do Chrome/Edge e aperte Enter para ver o JSON puro.  
+> 3. **No Console F12:** Pressione `F12` > aba Console e teste com `console.log()`.
 
 Edite o arquivo **`api.js`**. Use **só `.innerText`** (sem `innerHTML`).
-
-Dica: aperte **F12** e confira com `console.log()` antes de mexer na tela.
 
 ---
 
