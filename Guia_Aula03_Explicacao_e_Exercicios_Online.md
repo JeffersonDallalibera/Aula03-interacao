@@ -21,7 +21,7 @@ No dia a dia, quando você quer abrir um site, você abre o navegador e digita a
 No código JavaScript, quem faz esse papel de "navegador" é a função nativa **`fetch()`**:
 
 ```javascript
-fetch("https://api.escuelajs.co/api/v1/products/1");
+fetch("https://dummyjson.com/products/1");
 ```
 
 A palavra *fetch* em inglês significa *"ir buscar e trazer de volta"*.  
@@ -40,7 +40,7 @@ Por isso, usamos a dupla dinâmica **`async`** e **`await`**:
 ```javascript
 async function buscarProduto() {
   // 1º AWAIT: Espera o carteiro chegar com a caixa fechada (a resposta da rede)
-  const resposta = await fetch("https://api.escuelajs.co/api/v1/products/1");
+  const resposta = await fetch("https://dummyjson.com/products/1");
 
   // 2º AWAIT: Abre a caixa e transforma o texto bruto no objeto JavaScript (JSON)
   const produto = await resposta.json();
@@ -80,7 +80,7 @@ O **Hoppscotch** é a melhor alternativa online do mundo ao Postman. Funciona di
    👉 **`https://hoppscotch.io`**
 2. Ele abrirá uma interface limpa idêntica ao Postman!
 3. Verifique se o método está em **`GET`**.
-4. Cole a URL da API (ex: `https://api.escuelajs.co/api/v1/products/1`).
+4. Cole a URL da API (ex: `https://dummyjson.com/products/1`).
 5. Clique no botão **`Send`**.
 6. **Pronto!** Na tela de baixo você verá:
    - O Status Code: `200 OK` (verde);
@@ -102,7 +102,7 @@ Como o método `GET` é o método padrão da internet:
 2. Clique na aba **Console**.
 3. Digite e aperte Enter:
    ```javascript
-   const res = await fetch("https://api.escuelajs.co/api/v1/products/1");
+   const res = await fetch("https://dummyjson.com/products/1");
    const dados = await res.json();
    console.log(dados);
    ```
@@ -122,14 +122,14 @@ Para ver o resultado na tela, clique com o botão direito no `index.html` e esco
 
 **Objetivo:** Buscar o produto número 1 na API pública e preencher os dados no card inicial.
 
-* **URL:** `https://api.escuelajs.co/api/v1/products/1`
+* **URL:** `https://dummyjson.com/products/1`
 * **Botão:** `btn-buscar`
 * **IDs para preencher no HTML:** `titulo`, `preco`, `descricao`
 
 ```javascript
 // CÓDIGO FEITO EM CONJUNTO:
 async function buscarProduto() {
-  const url = "https://api.escuelajs.co/api/v1/products/1";
+  const url = "https://dummyjson.com/products/1";
   const resposta = await fetch(url);
   const produto = await resposta.json();
   console.log("Produto recebido:", produto);
@@ -148,7 +148,7 @@ document.getElementById("btn-buscar").addEventListener("click", buscarProduto);
 
 **Cenário:** O usuário digita o número do ID em um campo de texto (ex: `2`, `3`, `5` ou `10`) e clica no botão. O seu código deve buscar exatamente esse produto e exibir na tela!
 
-* **URL da API:** `"https://api.escuelajs.co/api/v1/products/" + id`
+* **URL da API:** `"https://dummyjson.com/products/" + id`
 * **Campo de Entrada (Input):** `input-id` (use `.value` para ler o que o aluno digitou)
 * **Botão:** `btn-buscar-id`
 * **Elementos a Preencher com `.innerText`:**
@@ -156,7 +156,7 @@ document.getElementById("btn-buscar").addEventListener("click", buscarProduto);
   - `ex1-preco` ➔ receberá `"Preço: $ " + produto.price`
   - `ex1-descricao` ➔ receberá `produto.description`
 * **Dica de Teste Online:** Antes de programar, teste no Hoppscotch ou no navegador:  
-  `https://api.escuelajs.co/api/v1/products/2`
+  `https://dummyjson.com/products/2`
 
 ---
 
@@ -179,11 +179,11 @@ document.getElementById("btn-buscar").addEventListener("click", buscarProduto);
 
 **Cenário:** As categorias da loja possuem IDs numéricos (1: Clothes, 2: Electronics, 3: Furniture). O usuário digita o ID e o sistema descobre o nome da categoria.
 
-* **URL da API:** `"https://api.escuelajs.co/api/v1/categories/" + id`
+* **URL da API:** `"https://dummyjson.com/products/" + id`
 * **Campo de Entrada (Input):** `input-cat-id`
 * **Botão:** `btn-buscar-cat`
 * **Elemento a Preencher com `.innerText`:**
-  - `cat-nome` ➔ `"Nome da Categoria: " + categoria.name`
+  - `cat-nome` ➔ `"Nome da Categoria: " + produto.category`
 * **Campo do JSON retornado:** `name`
 
 ---
@@ -192,11 +192,11 @@ document.getElementById("btn-buscar").addEventListener("click", buscarProduto);
 
 **Cenário:** O sistema armazena o cadastro dos operadores. Ao digitar o ID (ex: 1, 2, 3), o JavaScript consulta a API e exibe o nome, o e-mail e o perfil de acesso.
 
-* **URL da API:** `"https://api.escuelajs.co/api/v1/users/" + id`
+* **URL da API:** `"https://dummyjson.com/users/" + id`
 * **Campo de Entrada (Input):** `input-user-id`
 * **Botão:** `btn-buscar-user`
 * **Elementos a Preencher com `.innerText`:**
-  - `user-nome` ➔ `"Nome: " + usuario.name`
+  - `user-nome` ➔ `"Nome: " + usuario.firstName`
   - `user-email` ➔ `"E-mail: " + usuario.email`
   - `user-perfil` ➔ `"Perfil: " + usuario.role`
 * **Campos do JSON retornado:** `name`, `email`, `role`
@@ -207,7 +207,7 @@ document.getElementById("btn-buscar").addEventListener("click", buscarProduto);
 
 **Cenário:** Quando o usuário clica no botão "Buscar 10 Produtos", a API retorna um **Array de produtos**. Você deve exibir quantos produtos vieram na lista e o título do primeiro item!
 
-* **URL da API:** `"https://api.escuelajs.co/api/v1/products?limit=10&offset=0"`
+* **URL da API:** `"https://fakestoreapi.com/products?limit=10"`
 * **Botão:** `btn-lista`
 * **Elementos a Preencher com `.innerText`:**
   - `lista-quantidade` ➔ `"Quantidade recebida: " + lista.length + " produtos"`

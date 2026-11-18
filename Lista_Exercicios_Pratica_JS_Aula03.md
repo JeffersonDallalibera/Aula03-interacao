@@ -17,7 +17,7 @@ Edite o arquivo **`api.js`**. Use **só `.innerText`** (sem `innerHTML`).
 **URL:**
 
 ```
-"https://api.escuelajs.co/api/v1/products/" + id
+"https://dummyjson.com/products/" + id
 ```
 
 **Teste com:** 2, 3, 5, 10
@@ -59,7 +59,7 @@ Campos da resposta: `logradouro`, `bairro`, `localidade`, `uf`
 **URL:**
 
 ```
-"https://api.escuelajs.co/api/v1/categories/" + id
+"https://dummyjson.com/products/" + id
 ```
 
 **Teste com:** 1, 2, 3
@@ -79,7 +79,7 @@ Campo da resposta: `name`
 **URL:**
 
 ```
-"https://api.escuelajs.co/api/v1/users/" + id
+"https://dummyjson.com/users/" + id
 ```
 
 **Teste com:** 1, 2, 3
@@ -101,7 +101,7 @@ Campos da resposta: `name`, `email`, `role`
 **URL:**
 
 ```
-"https://api.escuelajs.co/api/v1/products?limit=10&offset=0"
+"https://fakestoreapi.com/products?limit=10"
 ```
 
 Aqui a resposta é uma **lista**. Use `produtos.length` e `produtos[0]`.
