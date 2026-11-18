@@ -92,7 +92,7 @@ user-email
 user-perfil
 ```
 
-Campos da resposta: `name`, `email`, `role`
+Campos da resposta: `firstName`, `email`, `role`
 
 ---
 
@@ -112,6 +112,69 @@ Aqui a resposta é uma **lista**. Use `produtos.length` e `produtos[0]`.
 lista-quantidade
 lista-primeiro
 ```
+
+---
+
+# Exercício 6: Buscar Post por ID
+
+**URL:**
+
+```
+"https://dummyjson.com/posts/" + id
+```
+
+**Input:** `input-post-id` | **Botão:** `btn-buscar-post`
+
+**Preencher:**
+
+```
+post-titulo
+post-corpo
+```
+
+Campos da resposta: `title`, `body`
+
+---
+
+# Exercício 7: Buscar Tarefa (Todo) por ID
+
+**URL:**
+
+```
+"https://dummyjson.com/todos/" + id
+```
+
+**Input:** `input-todo-id` | **Botão:** `btn-buscar-todo`
+
+**Preencher:**
+
+```
+todo-texto
+todo-status
+```
+
+Campos da resposta: `todo`, `completed`
+
+---
+
+# Exercício 8: Ordens da Fábrica SENAI (API Local)
+
+**URL:**
+
+```
+"./api/ordens.json"
+```
+
+**Botão:** `btn-ordens`
+
+**Preencher:**
+
+```
+ordem-numero
+ordem-cliente
+```
+
+Campos da resposta: `ordens[0].numero`, `ordens[0].cliente`
 
 ---
 

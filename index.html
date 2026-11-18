@@ -133,6 +133,60 @@
       </div>
     </section>
 
+    <!-- ============================================================== -->
+    <!-- EXERCÍCIO 06: BUSCAR POST POR ID                              -->
+    <!-- ============================================================== -->
+    <section class="card">
+      <span class="tag aluno">Exercício 06</span>
+      <h2>7. Buscar Post por ID</h2>
+      <p class="subtitulo">Digite o ID de um post (ex: 1, 2, 3) e exiba o título e o texto.</p>
+
+      <div class="linha-busca">
+        <input type="number" id="input-post-id" placeholder="ID do post (ex: 1)" min="1">
+        <button id="btn-buscar-post" class="btn">Buscar Post</button>
+      </div>
+
+      <div class="resultado">
+        <h3 id="post-titulo">Título do Post: --</h3>
+        <p id="post-corpo" class="texto-descricao">Conteúdo: --</p>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- EXERCÍCIO 07: BUSCAR TAREFA (TODO) POR ID                     -->
+    <!-- ============================================================== -->
+    <section class="card">
+      <span class="tag aluno">Exercício 07</span>
+      <h2>8. Buscar Tarefa (Todo) por ID</h2>
+      <p class="subtitulo">Digite o ID de uma tarefa (ex: 1, 2, 5) e veja a descrição e se foi concluída.</p>
+
+      <div class="linha-busca">
+        <input type="number" id="input-todo-id" placeholder="ID da tarefa (ex: 1)" min="1">
+        <button id="btn-buscar-todo" class="btn">Buscar Tarefa</button>
+      </div>
+
+      <div class="resultado">
+        <h3 id="todo-texto">Tarefa: --</h3>
+        <p id="todo-status">Concluída: --</p>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- EXERCÍCIO 08: ORDENS DA FÁBRICA SENAI (API LOCAL)             -->
+    <!-- ============================================================== -->
+    <section class="card">
+      <span class="tag aluno">Exercício 08</span>
+      <h2>9. Ordens da Fábrica SENAI (API Local)</h2>
+      <p class="subtitulo">Consuma a API local da pasta <code>./api/ordens.json</code> e exiba a primeira ordem de serviço.</p>
+
+      <button id="btn-ordens" class="btn">Buscar Ordens da Fábrica</button>
+
+      <div class="resultado">
+        <h3 id="ordem-numero">Ordem: --</h3>
+        <p id="ordem-cliente">Cliente: --</p>
+      </div>
+    </section>
+
   </main>
 
   <footer>
